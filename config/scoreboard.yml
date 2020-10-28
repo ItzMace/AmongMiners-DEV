@@ -1,0 +1,107 @@
+# AmongMiners Configuration File
+AmongMiners:
+  # Do not change this value:
+  config: 1
+  
+  # Displays a Scoreboard on the right side of the screen with some information
+  #
+  ## PLACEHOLDERS:
+  ## {spigot}		|		Shows the Spigot Version
+  ## {version}		|		Shows the Plugin Version
+  ##
+  ## {disable}		|		Hides a row
+  ## {empty}		|		Shows an empty row
+  ##
+  ## {arena_name}	|		Shows the name of the arena a player is currently in
+  ## {minplayers}	|		Shows the minimal amount of players of game start
+  ## {players}		|		Shows the amount of players on the server
+  ## {spectators}	|		Shows the amount of spectators on the server
+  ##
+  ## {team_name}	|		Shows the current team name the player is in, otherwise '-----'
+  ## {timer}		|		Shows the current timer
+  ## {task}			|		Shows the name of a task
+  ## {voteid}		|		Shows the id of the player to vote in meetings
+  ## {name}		    |		Shows the name of the player to vote in meetings
+  #
+  Scoreboard:
+    # This Scoreboard is shown during lobby where players waits for the game to start.
+    Lobby:
+      enabled: true
+      Style:
+        header: "&f&lAmongMiners"
+        score_14: " &oLMS {version}"
+        score_13: "{disable}"
+        score_12: "{disable}"
+        score_11: "{disable}"
+        score_10: "{disable}"
+        score_9: "{empty}"
+        score_8: "&7Players"
+        score_7: " &8� &a{players}"
+        score_6: "{empty}"
+        score_5: "&7Required Players"
+        score_4: " &8� &a{minplayers}"
+        score_3: "{empty}"
+        score_2: "&7Map"
+        score_1: " &8� &b{map}"
+        score_0: "{empty}"
+
+    # This Scoreboard is shown during ingame while players do their tasks.
+    Ingame:
+      enabled: true
+      Style:
+        header: "&f&lAmongMiners"
+        CrewmateView:
+            explaination1: "&f&lComplete tasks"
+            explaination2: " &f&lto win the game"
+            open_tasks: "&f{task}"
+            completed_tasks: "&a&m{task}"
+        ImpostorView:
+            explaination1: "&c&lKill the crewmates"
+            explaination2: " &c&lto win the game"
+            open_tasks: "&f{task}"
+            completed_tasks: "&a&m{task}"
+    
+    # This Scoreboard is shown during ingame while players are in a meeting.
+    IngameMeeting:
+      enabled: true
+      Style:
+        header: "&f&lWho Is The Impostor? &e{meetingtimer}"
+        separator: "&f----------------"
+        skipVote: "[&f&l/amv skip&f] SKIP VOTE"
+        # The following lines can only be seen by Crewmates during meeting
+        CrewmateView:
+          aliveCrewmate: "[&f&l/amv {voteid}&f] &e{name}"
+          deadCrewmate: "&8&l&oDEAD &7&o{name}"
+          aliveImpostor: "[&f&l/amv {voteid}&f] &e{name}"
+          deadImpostor: "&8&l&oDEAD &7&o{name}"
+          meetingCallerCrewmate: "[&f&l/amv {voteid}&f] &e&l&n{name}"
+          meetingCallerImpostor: "[&f&l/amv {voteid}&f] &e&l&n{name}"
+        # The following lines can only be seen by Impostors during meeting
+        ImpostorView:
+          aliveCrewmate: "[&f&l/amv {voteid}&f] &e{name}"
+          deadCrewmate: "&8&l&oDEAD &7&o{name}"
+          aliveImpostor: "[&f&l/amv {voteid}&f] &c{name}"
+          deadImpostor: "&8&l&oDEAD &c&o{name}"
+          meetingCallerCrewmate: "[&f&l/amv {voteid}&f] &e&l&n{name}"
+          meetingCallerImpostor: "[&f&l/amv {voteid}&f] &c&l&n{name}"
+    
+    # This Scoreboard is shown after the game ends and players wait for the server to restart.
+    AfterGame:
+      enabled: true
+      Style:
+        header: "&f&lAmongMiners"
+        score_14: " &oLMS {version}"
+        score_13: "{disable}"
+        score_12: "{disable}"
+        score_11: "{disable}"
+        score_10: "{disable}"
+        score_9: "{disable}"
+        score_8: "{disable}"
+        score_7: "{empty}"
+        score_6: "&2&lGame Over"
+        score_5: " &7Restarting"
+        score_4: "{empty}"
+        score_3: "{empty}"
+        score_2: "{disable}"
+        score_1: "{disable}"
+        score_0: "{disable}"

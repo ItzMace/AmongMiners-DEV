@@ -1,0 +1,82 @@
+# AmongMiners Configuration File
+AmongMiners:
+  # Do not change this value:
+  config: 1
+  # Do you want this plugin to be on a standalone server system?
+  # Standalone means, that this is the only gametype on the server
+  # If true: The plugin will be the only gametype on the server
+  # If false: You use a MultiWorld System on your Server (Multiverse etc.)
+  standaloneServer: true
+
+  # Do you want to disable the feature that AmongMiners checks for any missing configuration options in your files?
+  # This feature can help you to detect and fix any issues due to missing configuration options.
+  disableCheckForMissingConfigOptions: false
+  # Do you want to disable metrics?
+  # Metrics are usefull to collect data to improve the general experience with AmongMiners.
+  disableMetrics: false
+
+  # General JoinSign Module
+  JoinSigns:
+    # Do you want the signs to be placed to the given locations by the plugin?
+    # (LIMITED SUPPORT: Sometimes signs may break and lay as items on ground. Should be used for testing only!)
+    autoSpawnSigns: false
+    # General Syntax of Join Signs [PLACEHOLDERS: {players}, {maxplayers}, {state}, {timer}]
+    Syntax:
+      Line1: "&8[ &6AmongMiners &8]"
+      Line2: "&6{players} &8/ &6{maxplayers}"
+      Line3: "{state}"
+      Line4: "{timer} seconds"
+
+  # Custom Player Models (Skins)
+  CustomPlayerModels:
+    Skins:
+      # Do you want to disable the custom skin manager?
+      disable: false
+  
+  # Specific Round Phase Settings
+  Phases:
+    # Change Lobby Phase specific settings
+    Lobby:
+      # To which time should the countdown be reset when
+      # there are not enough players to start (in Seconds)
+      Timer: 90
+      # Sould we shorten the wait time when the server is full?
+      InstantStartOnFull: true
+      # Do you wish to see the countdown in your exp-bar?
+      XPCountdown: false
+    Ingame:
+      # How long should the livegame be in total (+Warmup) (in Seconds)
+      ## DEFAULT: 36000 Seconds = 10 Hours (to prevent endless games)
+      TotalTime: 36000
+      # How long should the players have time to equip before
+      # PVP will be enabled (in Seconds)
+      Warmup: 10
+      # Execute commands when the ingame phase begins...
+      Commands:
+        # Do you want to dispatch commands when this game phase starts?
+        enabled: false
+        # Which command do you want to execute?
+        ## Placeholders:
+        ### {arena_name} - The name of the arena
+        ### {player_name} - The name(s) of the online player(s)
+        ### {player_displayname} - The displayname(s) of the online player(s)
+        ### {player_playerlistname} - The playerlistname(s) of the online player(s)
+        commands:
+          - "/examplecommand {arena_name} {player_name}"
+    GameEnd:
+      # How long do you want the game end phase to be? (Default: 10)
+      Time: 15
+      # Execute commands when the game end phase begins...
+      Commands:
+        # Do you want to dispatch commands when this game phase starts?
+        enabled: false
+        # Only execute if there are any players who won?
+        onlyOnWin: true
+        # Which command do you want to execute?
+        ## Placeholders:
+        ### {arena_name} - The name of the arena
+        ### {winner_name} - The name(s) of the player(s) who won, otherwise 'null'
+        ### {winner_displayname} - The displayname(s) of the player(s) who won, otherwise 'null'
+        ### {winner_playerlistname} - The playerlistname(s) of the player(s) who won, otherwise 'null'
+        commands:
+          - "/examplecommand {arena_name} {winner_name}"

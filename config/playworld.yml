@@ -1,0 +1,28 @@
+# World Configuration File for AmongMiners
+World:
+  # DO NOT CHANGE THIS VALUE
+  config: 1
+  # Do you want this map to be enabled?
+  enabled: false
+  # The name of the map
+  name: "Example Map Name"
+  # By who is this map created?
+  builder: "Example Builder Team"
+  # This are general environment settings
+  Environment:
+    # This time will be set on game start (like /time <time> command)
+    Time: 0
+    # Do you want to hold the time on the value above or you want to let the sun go as default?
+    HoldTime: false
+    # Do you want to disable rain?
+    DisableRain: true
+  # This are the spawn AND meeting locations of the players:
+  SpawnLocations:
+    0: 
+      X: 0
+      Y: 0
+      Z: 0
+    1: 
+      X: 0
+      Y: 0
+      Z: 0
