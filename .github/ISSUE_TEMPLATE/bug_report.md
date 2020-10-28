@@ -1,4 +1,5 @@
 PLEASE read the guidelines for contributing which is linked above.
+
 ### Issue description
 
 Describe your issue here, please try to structure your
@@ -8,12 +9,14 @@ mention whether it is a problem/bug or a suggestion.
 We can't read your thoughts.
 
 Please include details like:
+
 * AM logs / Full console error
 * Video of the bug / problem
 * The ingame name of the involved players
 * Your config file(s), if changed anything
 
 ### Core information
+
 **Spigot version**: insert
 
 **AM version**: insert
@@ -21,6 +24,7 @@ Please include details like:
 **Plugin list**: insert
 
 ### Special environment information
+
 Insert 'none' if you don't use it
 
 **ViaVersion version**: insert
